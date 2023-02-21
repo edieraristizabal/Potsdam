@@ -1,3 +1,3 @@
 # Potsdam
 
-* [Intro](/intro.html)
+* [Intro](/Presentaciones/intro.html)
