@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Potsdam</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1 {
+				font-size: 40px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h2 {
+				font-size: 35px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h3 {
+				font-size: 30px;
+				color: blue;
+				font-weight: bold;
+				text-align: left;
+			}
+			
+			.reveal figcaption {
+				font-size: 15px;
+				color: gray;
+			}
+			
+			.primera #marca-agua{
+				display:none;
+				}
+			
+			.primera #lecture{
+				display:none;
+				}
+			
+			.reveal section p {
+				font-size: 0.7em;
+				}
+			
+			.reveal section li {
+				font-size: 0.6em;
+				}
+			
+			.reveal .slide-number {
+				right: 150px;
+				bottom: 3px
+				}
+
+			.reveal .move {
+				display: block;
+				margin-left: 200px;
+				margin-right: auto;
+				}
+
+			.reveal p.uppercase {
+  				text-transform: uppercase;
+				}
+
+			.reveal p.lowercase {
+  					text-transform: lowercase;
+					}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+	
+				<div id="marca-agua"><img style="border:none;box-shadow:none;width:60px;position:absolute;top:0%;right:0%;"
+						src="" />
+					<p id="date"></p>
+				</div>
+				<!--<div id="lecture" style="font-size:20px;position:absolute;top:100%;right:32%;">Machine Learning (Introducción)</div>-->
+				<section data-background-color="#ffffff" ; data-state="primera">
+					<h1 style="font-size: 50px; color:black">Hazard analysis of hydrometeorological concatenated processes</h1>
+					<p style="font-size: 1rem; color:gray">https://edieraristizabal.github.io/Potsdam/</p>
+					<p style="font-size: 2rem;font-weight: bolder;">Edier Aristizábal</p>
+					<p style="font-size: 1rem;font-style: italic;">Project supported by:</p>
+					<p style="font-size: 1.5rem;font-weight: bolder;">Alexander von Humboldt Foundation</p>
+					<p style="font-size: 1rem; color:gray">Georg Forster Research Fellowship for Experienced Researchers</p>
+
+					<p id="demo" style="position:absolute;top:100%;right:45%;color: gray;font-size: 1rem;"></p>
+					<script>
+						var d = new Date();
+						var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+						document.getElementById("demo").innerHTML = months[d.getMonth()] + " " + d.getDate() + " / " + d.getFullYear();
+					</script>
+				</section>
+			
+	<!--Hazard analysis of hydrometeorological concatenated processes-->
+				<section>
+
+					<section>
+						<h3>Risk scenario</h3>
+						<img src="https://i.pinimg.com/564x/1a/43/fa/1a43fa32ee1206aaf66540515fd615b7.jpg" width="1000">
+						<figcaption>Source: Modified from Jakob (2005)</figcaption>
+					</section>
+
+					<section>
+						<h3>Debris flow (lahar) --> volcano</h3>
+						<img src="https://i.pinimg.com/564x/d6/5d/f2/d65df2eb0cbebbcbba892df29394ab58.jpg" width="1000">
+					</section>
+
+					<section>
+						<h3>Debris flow --> earthquake</h3>
+						<img src="https://i.pinimg.com/564x/c5/82/35/c5823593aa5f5d8a22c8d21ee09b9991.jpg" width="1000">
+					</section>
+
+					<section>
+						<h3>Debris flow --> rainfall</h3>
+						<img src="https://i.pinimg.com/564x/08/8c/39/088c39daaf8b6e8ae8e170d76753b70b.jpg" width="900">
+						<figcaption>Source: El Tiempo</figcaption>
+					</section>
+
+					<section>
+						<h3>Debris flow --> rainfall</h3>
+						<img src="https://i.pinimg.com/564x/84/e6/3c/84e63cecd2bd60b6ffb9226570f57fdc.jpg" width="1000">
+						<figcaption>Source: García-Delgado et al. (2019)</figcaption>
+					</section>
+
+					<section>
+						<h3>Landslide clusters triggered by rainfall in Colombia</h3>
+						<img src="https://i.pinimg.com/564x/6c/72/6f/6c726f9d09f81d6580bccdb7642cd7f6.jpg" width="1100">
+					</section>
+
+					<section>
+						<h3>Landslide clusters triggered by rainfall in Colombia</h3>
+						<img src="https://i.pinimg.com/564x/30/ed/2f/30ed2f1efdca13f18dbaa4274ec0110a.jpg" width="1100">
+					</section>
+
+					<section>
+						<h3>Landslide clusters triggered by rainfall in Colombia</h3>
+						<img src="https://i.pinimg.com/564x/9e/8f/69/9e8f6907e1d2b984b7c4e52e160d82e4.jpg" width="1000">
+					</section>
+
+					<section>
+						<h3>Compactness coefficient (propagation)</h3>
+						<img src="https://i.pinimg.com/564x/54/7c/28/547c28c9728f4d80318a566ec60ae9fc.jpg" width="800">
+					</section>
+
+					<section>
+						<h3>Propagation area</h3>
+						<img src="https://i.pinimg.com/564x/c3/15/b7/c315b7e3bb67b89c4b6db0e7bd06404a.jpg" width="800">
+					</section>
+
+					<section>
+						<h3>Landslide density</h3>
+						<img src="https://i.pinimg.com/564x/2c/6e/fb/2c6efbcfbb4c22826d2bd197e2dd4cb3.jpg" width="1000">
+					</section>
+
+					<section>
+						<h3>Landslide density</h3>
+						<img src="https://i.pinimg.com/564x/d7/6a/cb/d76acbe0e129782374ebd6e62f1522c4.jpg" width="1000">
+					</section>	
+					
+					<section>
+						<h3>The frequency-area distribution</h3>
+						<img src="https://i.pinimg.com/564x/1a/2f/10/1a2f10c904a6ef5f6ef079543aaa23be.jpg" width="700">
+						<figcaption>Source: Malamud et al. (2004)</figcaption>
+					</section>
+
+					<section>
+						<h3>Rainfall threshold for landslide clusters in the Colombian Andes</h3>
+						<img src="https://i.pinimg.com/564x/b7/dc/6d/b7dc6d963692df158d2b34dc1ffeedb6.jpg" width="700">
+					</section>
+
+					<section>
+						<h3>Antecedent rainfall influence (90 days)</h3>
+						<h2>Mocoa</h2>
+						<img src="https://i.pinimg.com/564x/4e/39/a4/4e39a4683efa41bd36ffe2b3a80b3e32.jpg" width="1000">
+					</section>
+
+					<section>
+						<h3>Antecedent rainfall influence (90 days)</h3>
+						<h2>Mocoa</h2>
+						<img src="https://i.pinimg.com/564x/5f/08/bd/5f08bd743285e0a74c98bd1eeda0a433.jpg" width="700">
+					</section>
+
+					<section>
+						<h3>What's next?</h3>
+						<ul>
+							<li>To correlate hydrometeorological data with geomorphological elements to identify patterns (high intensity rainfall spots?)</li>
+							<li>To evaluate influence of geology and correlation with geomorphology (only granitic rocks?)</li>
+						</ul>
+					</section>
+
+				</section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				slideNumber: 'c/t',
+				hash: true,
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+						}
+					}
+				},
+				menu: {
+					side: 'left', // 'left' or 'right'.
+					width: 'normal', // 'normal', 'wide', 'third', 'half', 'full', or
+					numbers: false,
+					titleSelector: 'h1, h2, h3',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+					themesPath: 'dist/theme/',
+					transitions: false,  // ['None', 'Fade', 'Slide']
+					openButton: true,
+					openSlideNumber: true,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+	
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+				dependencies: [
+	
+				]
+			});
+		</script>
+	</body>
+</html>

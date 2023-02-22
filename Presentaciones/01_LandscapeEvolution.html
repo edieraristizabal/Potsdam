@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Potsdam</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1 {
+				font-size: 40px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h2 {
+				font-size: 35px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h3 {
+				font-size: 30px;
+				color: blue;
+				font-weight: bold;
+				text-align: left;
+			}
+			
+			.reveal figcaption {
+				font-size: 15px;
+				color: gray;
+			}
+			
+			.primera #marca-agua{
+				display:none;
+				}
+			
+			.primera #lecture{
+				display:none;
+				}
+			
+			.reveal section p {
+				font-size: 0.7em;
+				}
+			
+			.reveal section li {
+				font-size: 0.6em;
+				}
+			
+			.reveal .slide-number {
+				right: 150px;
+				bottom: 3px
+				}
+
+			.reveal .move {
+				display: block;
+				margin-left: 200px;
+				margin-right: auto;
+				}
+
+			.reveal p.uppercase {
+  				text-transform: uppercase;
+				}
+
+			.reveal p.lowercase {
+  					text-transform: lowercase;
+					}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+	
+				<div id="marca-agua"><img style="border:none;box-shadow:none;width:60px;position:absolute;top:0%;right:0%;"
+						src="" />
+					<p id="date"></p>
+				</div>
+				<!--<div id="lecture" style="font-size:20px;position:absolute;top:100%;right:32%;">Machine Learning (Introducción)</div>-->
+				<section data-background-color="#ffffff" ; data-state="primera">
+					<h1 style="font-size: 50px; color:black">Landscape evolution & natural hazards in the northern Colombian Andes</h1>
+					<p style="font-size: 1rem; color:gray">https://edieraristizabal.github.io/Potsdam/</p>
+					<p style="font-size: 2rem;font-weight: bolder;">Edier Aristizábal</p>
+					<p style="font-size: 1rem;font-style: italic;">Project supported by:</p>
+					<p style="font-size: 1.5rem;font-weight: bolder;">Alexander von Humboldt Foundation</p>
+					<p style="font-size: 1rem; color:gray">Georg Forster Research Fellowship for Experienced Researchers</p>
+
+					<p id="demo" style="position:absolute;top:100%;right:45%;color: gray;font-size: 1rem;"></p>
+					<script>
+						var d = new Date();
+						var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+						document.getElementById("demo").innerHTML = months[d.getMonth()] + " " + d.getDate() + " / " + d.getFullYear();
+					</script>
+				</section>
+					
+		<!--Landslide and debris flow regarding to landscape evolution-->
+				<section>
+
+					<section>
+						<h3>The northern Colombian Andes</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1IVOPUPCnZsfRXd17j9MJ6km5WAZ0hrSY" width="450">
+						<img src="http://drive.google.com/uc?export=view&id=1Z8_T_vvuXcRnYEbGRryn5f4EYTGzFqLF" width="150" style="position: absolute; top: 60px; left: 545px; border: 2px black solid;"/>
+						<figcaption>Source: Google Earth Engine</figcaption>
+					</section>
+
+					<section>
+						<h3>Regional geological setting</h3>
+						<img src="Images/Montes_2019.png" width="800">
+						<figcaption>Source: Montes et al. (2019)</figcaption>
+					</section>
+
+					<section>
+						<h3>Regional fault systems</h3>
+						<img src="https://www.researchgate.net/profile/Gaspar-Monsalve/publication/272891429/figure/fig3/AS:267900636364811@1440883897126/Tectonic-map-of-the-northern-Andes-showing-local-crustal-thickness-results-from-previous_W640.jpg" width="550">
+						<figcaption>Source: Poveda et al. (2015)</figcaption>
+					</section>
+
+					<section>
+						<h3>Regional stress regime</h3>
+						<img src="https://www.researchgate.net/profile/Andres-Mora-13/publication/260491195/figure/fig7/AS:614015801753605@1523404183177/Tectonic-map-of-northern-South-America-including-stress-regimes-after-Colmenares-Zoback_W640.jpg" width="500">
+						<figcaption>Source: Teson et al. (2013)</figcaption>
+					</section>
+
+					<section>
+						<h3>Study area relief</h3>
+						<div style="position: relative; width: 100%;"> 
+						<img src="http://drive.google.com/uc?export=view&id=1yb7a3r2blSzEoSB3OuHQj7QdtFFTucbe" width="550"/>
+						</div>
+						<figcaption>Source: Google Earth Engine</figcaption>
+					</section>
+
+					<section>
+						<h3>Major basins</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1NaR_il0YPB0542vFGHBTpx4Ofws3iqA-" width="600">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Recent landslides</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10Pwfw8UiYQCuTeoN9ZpU0KeyGPKbevd7" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relict landslides</h3>
+						<img src="http://drive.google.com/uc?export=view&id=14ISNzwFaX_wlX9gU0SYCpCVEUDsYsvfJ" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Fan inventory</h3>
+						<img src="http://drive.google.com/uc?export=view&id=11kz_wCN_n29YUiJMZn86SyGlg49nwdNl" width="450">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Local geological setting</h3>
+						<img src="http://drive.google.com/uc?export=view&id=19igRrFzWWO1Tbv3aMiConS11c4SkliJg" width="600">
+						<figcaption>Source: Gomez & Pinilla-Pachón (2019)</figcaption>
+					</section>
+
+					<section>
+						<h3>Local faults</h3>
+						<img src="http://drive.google.com/uc?export=view&id=17mXoDnyW4LiUXDWuCE19P_gAizX0WH4l" width="750">
+						<figcaption>Source: Gomez & Pinilla-Pachón (2019)</figcaption>
+					</section>
+	
+					<section>
+						<h3>Active faults</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1FqBd_hGgNIZIaj8OY3Tb7S0RPYoFF7jM" width="800" class="move">
+						<figcaption>Source: Gomez & Pinilla-Pachón (2019)</figcaption>
+					</section>
+	
+					<!--profiles EW-->
+					<section data-transition="none">
+						<h1>Swath profiles EW</h1>
+						<p style="color: black; font-size: 2rem;">Python Package: pyswath</p>
+						<p style="color: black; font-size: 2rem;">SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections North</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-9zUan6Qty1uIDn9bUTEa0JltBFe3Y8E" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NW</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-LWiQiRm1HZFRsGe98XHicTz_N_BPyuu" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Caldas-Bello</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-MYsfHwdkvI6xNLN88kIUfCtAdBVHOE4" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-YfpZRtsxn3HXeU7s5mm7xvgshgId5M2" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections South</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-Y4dvap1XkuY4KXiVvgT0stuyadEmNIS" width="1000">
+					</section>
+
+				<section data-visibility="hidden">
+					<!--profiles NE-->
+					<section data-transition="none">
+						<h1>Swath profiles NE</h1>
+						<p>Python Package: pyswath</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NS</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-elIw6aTrLcin9fp_bZluURy5DqaVQrZ" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections NW</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-hs-B6AtcbSFniIOvg2VqMWIr-lL--sK" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas-Espíritu Santo</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-hu7tOXX-z_7BWtxcAKMpCRlJLTJ44zK" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 1</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-o_wFFBa1kUjeQJz_ff66brjBOgemz4w" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 2</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-vQfFgqD6vwgGZHrXrx4fZu1qwlFWTYC" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections NW</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-xnUthyH7PObLnxYxCACBoWRP8pEkxRW" width="1000">
+					</section>
+	
+					<!--profiles NW-->
+					<section data-transition="none">
+						<h1>Swath profiles NW</h1>
+						<p>Python Package: pyswath</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NS</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-xvbVvWWpTLpAowORBwlFgoRnnwZBPJb" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Rionegro</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10KSdCga9yaIZ3d0-QcYEDi6xu7s_rmcU" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Bello</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10aXdxi6G8z3EYTNyaV1QOy6z94muR5IV" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas-Espíritu Santo</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10B0V21d4hf1OSMZBIspXS_2aa2hR6WUc" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 1</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10GBisDyU1Wzb5SddjUjGPkCdMdSINZuY" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 2</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10K5NE6tWBGO1SID5Uw3HENTfneY0uOMa" width="1000">
+					</section>
+				</section>
+					
+					<section>
+						<h3>Elevations > 3700 msnm</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1Ms5GxXwz_-D-WtKFbUjS5VDbUbEYDsqW" width="600">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relief</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1ReDW4f38iEdhfzrnnLBuMZRxkMyXfnxt" width="450" class="move">
+					</section>
+	
+					<section>
+						<h3>Assimetry index</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1TSoCFqXeI_9ZYvf4sugjfsBHZtzWdqq8" width="800" class="move">
+					</section>
+	
+					<section>
+						<h3>Hipsometry index</h3>
+						<img src="http://drive.google.com/uc?export=view&id=161Cuv3v61B3rPnzMg1rzqIP1qrR-gJGN" width="800" class="move">
+					</section>
+	
+					<section>
+						<h3>Hack index</h3>
+						<img src="http://drive.google.com/uc?export=view&id=17IMu5sOgDNHyqeV-06WDpneLF8W8GntE" width="800" class="move">
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico1.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico2.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico3.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico4.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico5.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico6.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico7.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="Images/morfometrico8.png" width="900">
+						<figcaption></figcaption>
+					</section>
+	
+					<!--Regional analysis-->
+					<section>
+						<h1>$\chi$ analysis</h1>
+						<p>LSDTopoTools</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+
+					<section>
+						<h3>Coordenada $\chi$</h3>
+						<p>If U and K are uniform, they can be brought outside the integral, and:</p>
+	
+						$z(x)=z(x_b)+(\frac{U}{KA_0^m})^{1/n}\int_{x_b}^x\frac{dx}{A(x)^{m/n}}$<br>
+	
+						<p>To create transformed river profiles with units of length on both axes, it is convenient to introduce a reference drainage area,
+							$A_0$<p>
+	
+						$z(x)=z(x_b)+(\frac{U}{KA_0^m})^{1/n} \chi$<br>
+	
+						<p>where the longitudinal coordinate is equal to:</p>
+	
+						$\chi=\int_{x_b}^x(\frac{A_0}{A(x)})^\theta dx$<br>
+	
+						<p>and $A_0$ is an arbitrary scaling area that gives $\chi$ units of length. The slope of the χ‐z plot is $k_{sn}$ if $A_0$ is set to unity</p>
+						<figcaption>Source: Perron & Royden (2012)</figcaption>
+					</section>
+	
+					<section>
+						<img src="https://www.researchgate.net/profile/Scott-Mccoy/publication/260611497/figure/fig1/AS:601616176648225@1520447882746/River-basins-and-river-profiles-in-equilibrium-and-disequilibrium-A-and-B-Change-in.png"
+							width="700">
+						<figcaption>Fuente: Willett et al. (2014)</figcaption>
+					</section>
+	
+					<section>
+						<h3>χ plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=19p5fF9QcXVWgTDevfiGronFvK-gil_XT" width="450">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Transient borders</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1CuUdCxScKDfEBdhufT7kBE0RZhUxmnn5"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Recient landslides</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1AYywIKyymGzLCOyZSL1-jKVFiS3GdT9R" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relict landslides</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1jfbjLBeanmiYLsLQAktMwFwLKHRY8fcr" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Fan inventory</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1INPRQ3iRTEhvl2-49ySs7RtcB1cU4yQv" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section data-visibility="hidden">
+
+						<section>
+							<img src="http://drive.google.com/uc?export=view&id=1x1fVKy0GvZBX0uKwKuEmpFLoX4aPYQ_b" width="500">
+						</section>
+		
+						<section>
+							<h3>χ plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1N00HPrieDjB4h3H4zAS9Ifcw24QDKbzd" width="430">
+						</section>
+		
+						<section>
+							<h3>Hypsometric plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1XyJW0XTyxvMyB6xrrEUmILbhA6qQ04WI" width="600">
+						</section>
+		
+						<section>
+							<h3>Longitudinal river profiles</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1KulxD_RQL_x7yr5t-Msk33Hl0VdvyTEH" width="900">
+						</section>
+		
+						<section>
+							<h3>Slope-Elevation plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1UMn0J5qeh1uvMpMwV3y7ORj5U7-7L70W" width="750">
+						</section>
+
+						<section>
+							<h3>Catchment: Grande</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1Og9VLz_0yoXFpRSeglxU9LGAWVUJAp1P" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1tHf0JAWod7nInPHMO1-iCbdbcHGVcmTf" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1-3StLZuYFUM9fnbXAfeQr3-CKV9o98td" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1c2JRvMHPE8HhgWSqtsBH-LMKt_eiMS2H" width="350">
+							</div>
+						</section>
+			
+						<section>
+							<h3>Catchment: Tinitá</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1eUMcy2vTn8LBE6c_MGgJnJRlX881yfxK" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1mu3lNwNTyP4RAv35vGg1_-mwdBEw8e_P" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1gH5xeJMV2ZIoO5JCG6TbkJl_ZEIuuiBb" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1Z5y-_qsO6m5YsbdhVybTl3dvNAI-mZGB" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Cana</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1nwum8XIiQ9LNHnovZ3_s37RCUfvwiBwq" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1Yvzhx5pUDI-saa_ZjX6DnbntfTV8yU2j" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1nNm5CJvBDV2e3fDBOIVWwfiNCWqk3Ris" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1W8xDmhz6hTEcGuRVpiFowRAl9559HNpK" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Guadalupe</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1mJbPiNLBNo9TC2A1cFMQ1aE7CFs8hx6U" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1sfnpXmTE4YCzRpX7QvInvwinPjiovLAJ" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1AMFz_wz9aIx_-AAf5rHnAurVD-x5UZCf" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1cRa5NuaZQiUiWRPRwFk433UQW027FH1k" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Porce II</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1DViDQVCMyQjakw4CuJ6_kvJ4jxQfssGE" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=135hGBKSserGkKabvok7pfgJzTxrvspDQ" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1-z3VbmwjVxTNVouxA_68yMK-hbxKTl2M" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1rn9yNz-G4ruBDZMRMN6MVDRlaQrl27kv" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Ovejas</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1vzJtlvUoZu58LcIP7peZM08nxLpIZPvx" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=135hGBKSserGkKabvok7pfgJzTxrvspDQ" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1mH3MqvY_FgZUGKMmHNUpjHK9k2psnks9" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1Uw44eIKKtHJja4NSNaN5hF-3q5hXkdiv" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Piedras Blancas</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1oOF7uFn818Pjpb238pQSGD6DQY2-WLPm" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1Zj0ojDHbn4xpka0FtbGaJdkUlOC05Pnf" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1Ow0m4p4WbOtSm69daH4Z1BTqzDnx4mnG" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1krQOHe8eDjOXXeCkbiBwv8t74_tpiTLf" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: La García</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1YCkCZX7hUwZLeFIbf2FbW3OgstKrtlhe" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1hDYg-NJttcSsNMzojQHR61khryCNKYbX" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=19x97D3f-NqMVpMOd8fC4-pJlHibp9nlR" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1jmGqGjJsHDuFQRjJWo9qJPy4O0f_vjMv" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Santa Elena</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1LZq2kjFgx2AazUDexuUaPLtVnQC7mDsg" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1ARO5tbShigbSdTm4tXRuy2tfJ9JfDRLJ" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1Z1qMCBV-8Y70TSALW4eeGvmYQLtaDMCD" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1pq9j3g_R_dfo4KTQawri2PDLONY87pUB" width="350">
+							</div>
+						</section>
+						
+						<section>
+							<h3>Catchment: La Iguaná</h3>
+							<img src="http://drive.google.com/uc?export=view&id=13QfLziLUIxd96ItDZMD58Xb9wBnSYU45" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1LjkobKaNnrjsqPnf25LjvdgsN8NWRmxz" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=155lNoqfPm5QY1AjAQJ7DbC9wLoIZfcIc" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1n8yNzAZaD5oDWofHpe2XTya0VpqFWxxq" width="350">
+							</div>
+						</section>
+		
+						<section>
+							<h3>Catchment: Doña Maria</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1QCDI_GOSK2odfuv1dk2OFle2HT9FvsKK" width="200">
+							<div>
+							<img src="http://drive.google.com/uc?export=view&id=1x8Z-eXqH7W1ziEMiAre0YHF7sMvPa5q9" width="250">
+							<img src="http://drive.google.com/uc?export=view&id=1bMLHQd-8yj8xDDb1pGpiEpKATtp6jLU0" width="300">
+							<img src="http://drive.google.com/uc?export=view&id=1VIJ2nmbqFtggINDGbMJ4O-nqEGoLTZJp" width="350">
+							</div>
+						</section>
+
+
+					<!--Nare-->
+					<section>
+						<h1>Sub-basin Nare</h1>
+					</section>
+		
+						<section>
+							<img src="http://drive.google.com/uc?export=view&id=1-FBiWE38wkMCpmUZeW3onU015a6JH0pZ" width="800">
+						</section>
+	
+						<section>
+							<h3>Hypsometric plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1D0TCM-un_C4qfxeUlfq4IBtdOItv8zxh" width="600">
+						</section>
+		
+						<section>
+							<h3>Longitudinal river profiles</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1bnbkKDqiPLO9YVVuZgDvU2K2uIpuyLM_" width="900">
+						</section>
+		
+						<section>
+							<h3>Slope-Elevation plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1RoGTq8DYOOAjxhtvh0L3veVjFLoUTYGE" width="750">
+						</section>
+	
+						<!--Arma-->
+					<section>
+						<h1>Sub-basin Arma</h1>
+					</section>
+	
+					<section>
+						<img src="http://drive.google.com/uc?export=view&id=1FA1qNu2aqweL9PxXTnXp188iT-GQMzRb" width="450">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="http://drive.google.com/uc?export=view&id=1EN4-5SWii4DIE_u1cXliKg6ddoPDcrg_" width="450">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Hypsometric plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1Sub_8mRMy1fjkwHvMPVGc5JNe3C8M8jg" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Slope - Elevation plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=17miuRjJW4L70Wy2SXY96x43YXzuQvPvB" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Slope - Area plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1SRD-evSZIcWs2Jfap9ykLRrQySeHB35E" width="700">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Longitudinal profile</h3>
+						<img src="http://drive.google.com/uc?export=view&id=13wGi4KQDBLvfJEWiXW1S6feXwoNbsUWH" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+				
+					<section>
+						<h3>$K_{sn}$</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-0CtXzRxEdaCZK6XkZh9T2-i1nQifhOS" width="800">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>$K_{sn}$</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1VmrFhsL7XCuoHu7Pqngyme75sdcO6JnQ" width="400">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>χ plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1ZEAG9pozr2XJjfQgawNFnIkv7KIsO2Ga" width="400">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Catchment capture</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1pAQSKmKQcAbJZkQY0MugSmeKBKB2vzf0" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Plateaux capture</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1_oIXN1ApQRFmSBBg5vjS4aw1v3M2Zd3H" width="600">
+						<figcaption></figcaption>
+					</section>
+
+					</section>
+
+					<section>
+						<h3>What's next?</h3>
+						<ul>
+							<li>Estructural analysis using DEM and drainage network to correlate with morphometric anomalies</li>
+							<li>Slope deposit dating using cosmogenic isotopes (is it possible?)</li>
+							<li>Slope-area and $\theta$ $(m/n)$ analysis to identify transient basins</li>
+							<li>To apply spatial statistic techniques to morphometric parameters (Moran index, spatial regression  models) </li>
+						</ul>
+					</section>
+	
+				</section>
+			
+			</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				slideNumber: 'c/t',
+				hash: true,
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+						}
+					}
+				},
+				menu: {
+					side: 'left', // 'left' or 'right'.
+					width: 'normal', // 'normal', 'wide', 'third', 'half', 'full', or
+					numbers: false,
+					titleSelector: 'h1, h2, h3',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+					themesPath: 'dist/theme/',
+					transitions: false,  // ['None', 'Fade', 'Slide']
+					openButton: true,
+					openSlideNumber: true,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+	
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+				dependencies: [
+	
+				]
+			});
+		</script>
+	</body>
+</html>

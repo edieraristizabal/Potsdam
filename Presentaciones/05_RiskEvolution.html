@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Potsdam</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1 {
+				font-size: 40px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h2 {
+				font-size: 35px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h3 {
+				font-size: 30px;
+				color: blue;
+				font-weight: bold;
+				text-align: left;
+			}
+			
+			.reveal figcaption {
+				font-size: 15px;
+				color: gray;
+			}
+			
+			.primera #marca-agua{
+				display:none;
+				}
+			
+			.primera #lecture{
+				display:none;
+				}
+			
+			.reveal section p {
+				font-size: 0.7em;
+				}
+			
+			.reveal section li {
+				font-size: 0.6em;
+				}
+			
+			.reveal .slide-number {
+				right: 150px;
+				bottom: 3px
+				}
+
+			.reveal .move {
+				display: block;
+				margin-left: 200px;
+				margin-right: auto;
+				}
+
+			.reveal p.uppercase {
+  				text-transform: uppercase;
+				}
+
+			.reveal p.lowercase {
+  					text-transform: lowercase;
+					}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+	
+				<div id="marca-agua"><img style="border:none;box-shadow:none;width:60px;position:absolute;top:0%;right:0%;"
+						src="" />
+					<p id="date"></p>
+				</div>
+				<!--<div id="lecture" style="font-size:20px;position:absolute;top:100%;right:32%;">Machine Learning (Introducción)</div>-->
+				<section data-background-color="#ffffff" ; data-state="primera">
+					<h1 style="font-size: 50px; color:black">Quantifying evolving risk in the urban expansion of Medellín city along the valley hisllslopes</h1>
+					<p style="font-size: 1rem; color:gray">https://edieraristizabal.github.io/Potsdam/</p>
+					<p style="font-size: 2rem;font-weight: bolder;">Edier Aristizábal</p>
+					<p style="font-size: 1rem;font-style: italic;">Project supported by:</p>
+					<p style="font-size: 1.5rem;font-weight: bolder;">Alexander von Humboldt Foundation</p>
+					<p style="font-size: 1rem; color:gray">Georg Forster Research Fellowship for Experienced Researchers</p>
+
+					<p id="demo" style="position:absolute;top:100%;right:45%;color: gray;font-size: 1rem;"></p>
+					<script>
+						var d = new Date();
+						var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+						document.getElementById("demo").innerHTML = months[d.getMonth()] + " " + d.getDate() + " / " + d.getFullYear();
+					</script>
+				</section>
+
+	<!--Quantifying evolving risk for the urban expansion of Medellín city along the valley hisllslopes.-->
+				<section>
+
+					<section>
+						<h3>Study area relief</h3>
+						<div style="position: relative; width: 100%;"> 
+						<img src="http://drive.google.com/uc?export=view&id=1lm2F68D3GuYSOELS7arDdCCUUuc8R054" width="550"/>
+						<p style="position: absolute; top: 380px; left: 75px; width: 100%;font-size:medium;"><strong>Aburrá Valley</strong></p>
+						</div>
+						<figcaption>Source: Google Earth Engine</figcaption>
+					</section>
+
+					<section>
+						<img src="http://drive.google.com/uc?export=view&id=1buv_s7XW1mowFBpD0IwYwt0CUXGSMbZH" width="1000">
+					</section>
+
+					<section>
+						<h3>Aburrá Valley population</h3>
+						<img src="https://i.pinimg.com/564x/96/95/a7/9695a77b887acc3916f42462ccdf6f28.jpg" width="780">
+					</section>
+
+					<section>
+						<h3>Aburrá Valley expansion</h3>
+						<img src="https://i.pinimg.com/564x/62/0a/b0/620ab0bc317c63385a39955b05fe54ee.jpg" width="750">
+						<figcaption>Source: Hermelin (2007)</figcaption>
+					</section>
+
+					<section>
+						<h3>Aburrá Valley slopes</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1CLOsd3puIwu3rR6JTM26kmKD9IHCzyc9" width="900">
+					</section>
+
+					<section>
+						<h3>What's next?</h3>
+						<ul>
+							<li>Spatial and temporal characterization of urban sprawl along hillslopes using remote sensing.</li>
+							<li>To correlate landslide occurrence and urban sprawl along the valley hillslopes.</li>
+						</ul>
+					</section>
+
+				</section>
+			
+			</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				slideNumber: 'c/t',
+				hash: true,
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+						}
+					}
+				},
+				menu: {
+					side: 'left', // 'left' or 'right'.
+					width: 'normal', // 'normal', 'wide', 'third', 'half', 'full', or
+					numbers: false,
+					titleSelector: 'h1, h2, h3',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+					themesPath: 'dist/theme/',
+					transitions: false,  // ['None', 'Fade', 'Slide']
+					openButton: true,
+					openSlideNumber: true,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+	
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+				dependencies: [
+	
+				]
+			});
+		</script>
+	</body>
+</html>
