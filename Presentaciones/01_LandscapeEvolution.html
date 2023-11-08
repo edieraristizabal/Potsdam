@@ -73,6 +73,13 @@
   					text-transform: lowercase;
 					}
 
+			.reveal .twocolumn {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+			text-align: left;
+			}
+
 		</style>
 
 	</head>
@@ -419,6 +426,12 @@
 					</section>
 
 					<section>
+						<h3>Ripley's function</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1sAC6kezdb9BNcBJxKHFFK609_IWRJjLh">
+						<figcaption>Data: 12.5 m DEM, Software: Pysal Python library</figcaption>
+					</section>
+
+					<section>
 						<h3>Fan inventory</h3>
 						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10ywJGixpkscB8-rBdQ6fslD2cg76Yjmf" width="450">
 						<figcaption></figcaption>
@@ -533,68 +546,131 @@
 <!--Hipsometry analysis-->
 				<section>
 					<section>
-						<h1>Hipsometry analysis</h1>
+						<h1>Hypsometric analysis</h1>
 						<p>SRTM 30m & AlosPalsar 12.5m</p>
 					</section>
 
 					<section>
-						<h3>Hipsometry index (DEM 30m)</h3>
+						<h3>Hypsometric index (DEM 30m)</h3>
 						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=161Cuv3v61B3rPnzMg1rzqIP1qrR-gJGN" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index (DEM 12.5m)</h3>
+						<h3>Hypsometric index (DEM 12.5m)</h3>
 						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1m1B8-eIixco7L_7s2i4R8kq1yZZLrCPI" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & faults (DEM 12.5m)</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1m4Gni7RMXDMdcVnpwMU6CsjD-EkpNWF5" class="move">
+						<h3>Hypsometric index (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1u99zXY5oUCqo0DbQ5wji3YlyHQdCs3Tk" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & recient landslides (DEM 30m)</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1EEGBmRx_6JkGL8ZF3lkd0YY7Im0fI56D" class="move">
+						<h3>Hypsometric index & faults (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uHMNnyisk9L6PZfTqV_7HTgFu2grl7pt" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & recient landslides (DEM 12.5m)</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1mOL7SwF2_j7TQ_D-Es1NxF1e96_jACbL" class="move">
+						<h3>Hypsometric index & recent landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uOACrsEvqD34jBJX2179aRC38wsWQkFq" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & relict landslides (DEM 30m)</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1BTc9s0Iqe081PxxPpt92oXPXq7TxLrdj" class="move">
+						<h3>Hypsometric index & relict landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uNnLew3TcoQdcb_c90OegFB1ejvenHQw" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & relict landslides (DEM 12.5m)</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1mKfnlM6HZR6h7OcbB4YVGzOTJbq2OuuL" class="move">
+						<h3>Hypsometric index & fan catchments</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uVUM-asCmFgNPOuBBNUjUnyY0NGZpmfW" class="move">
 					</section>
 
 					<section>
-						<h3>Hipsometry index & fan catchments</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=15VXmzXv9ZW_bRIlJkc4W3gLnXGTF4DW5" class="move">
-					</section>
-
-					<section>
-						<h3>Hipsometry index & fan catchments</h3>
-						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1m6LXC0GJRiVkA1XjHuTmXdrFEeP9rvcR" class="move">
-					</section>
-
-					<section>
-						<h3>Recent landslide density vs hipsometric index</h3>
-						<div>
-						<img src="http://drive.google.com/uc?export=view&id=1oxYpooblqA4Fn20DT9oJe7GrfuEEmxFU" width="550">
-						<img src="http://drive.google.com/uc?export=view&id=1p5ESBxvgTLYlx_G2EtOmh6YBkeq_cvPX" width="350">
+						<div class="twocolumn">
+							<div>
+								<h3>Recent</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vKDToz2jp1IPx5mT8CQHYnbzyR5RIHX-" width="500">
+							</div>
+							<div>
+								<h3>Relict</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vs_y1VRwoEh7bz7CZctQpx0CkdAHhLI4" width="500">
+							</div>
 						</div>
 					</section>
 
 					<section>
-						<h3>Relict landslide density vs hipsometric index</h3>
-						<div>
-						<img src="http://drive.google.com/uc?export=view&id=1pB_Vk0X4P0luoVOka_DCgSy9WAzvYMYy" width="550">
-						<img src="http://drive.google.com/uc?export=view&id=1pCC2UepiL7E6fvSyC8SK23uQYxJnIQjx" width="400">
+						<div class="twocolumn">
+							<div>
+								<h3>Recent</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vF4prEPeHAXHrT_YZamYQrb6HhdJ2a22" width="500">
+							</div>
+							<div>
+								<h3>Relict</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vXwFyInNE3Hn8G77YX0CAkgbOK7xhSfo" width="500">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3>Recent</h3>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vKDToz2jp1IPx5mT8CQHYnbzyR5RIHX-" width="700">
+							</div>
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vReQxeKE_FjWn2QGOs_u4gpu2Xv4tslQ" width="400">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Relict</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vs_y1VRwoEh7bz7CZctQpx0CkdAHhLI4" width="700">
+							</div>
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1w-Sc9pC8dHQ1sO0t2BZ42u1a8QBJhZxj" width="400">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Nechi</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1wmXLV_f5xPsezJkR0OS5IQKmMEk5HeSk" width="700">
+							</div>
+							<div>
+								<h3></h3>
+								<img class="r-stretch" src="" width="400">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Arma</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1x1JeP4jeoHUJqNRrS_GON1PXARO0sZw7" width="700">
+							</div>
+							<div>
+								<h3></h3>
+								<img class="r-stretch" src="" width="400">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>San Juan</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1xmQfBvF2gUQLgC2aVgeJyc7t2csbKodD" width="700">
+							</div>
+							<div>
+								<h3></h3>
+								<img class="r-stretch" src="" width="400">
+							</div>
 						</div>
 					</section>
 				</section>
