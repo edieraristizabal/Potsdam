@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Potsdam</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1 {
+				font-size: 40px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h2 {
+				font-size: 35px;
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.reveal h3 {
+				font-size: 30px;
+				color: blue;
+				font-weight: bold;
+				text-align: left;
+			}
+			
+			.reveal figcaption {
+				font-size: 15px;
+				color: gray;
+			}
+			
+			.primera #marca-agua{
+				display:none;
+				}
+			
+			.primera #lecture{
+				display:none;
+				}
+			
+			.reveal section p {
+				font-size: 0.7em;
+				}
+			
+			.reveal section li {
+				font-size: 0.6em;
+				}
+			
+			.reveal .slide-number {
+				right: 150px;
+				bottom: 3px
+				}
+
+			.reveal .move {
+				display: block;
+				margin-left: 200px;
+				margin-right: auto;
+				}
+
+			.reveal p.uppercase {
+  				text-transform: uppercase;
+				}
+
+			.reveal p.lowercase {
+  					text-transform: lowercase;
+					}
+
+			.reveal .twocolumn {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+			text-align: left;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+	
+				<div id="marca-agua"><img style="border:none;box-shadow:none;width:60px;position:absolute;top:0%;right:0%;"
+						src="" />
+					<p id="date"></p>
+				</div>
+				<!--<div id="lecture" style="font-size:20px;position:absolute;top:100%;right:32%;">Machine Learning (Introducción)</div>-->
+				<section data-background-color="#ffffff" ; data-state="primera">
+					<h1 style="font-size: 50px; color:black">Landscape evolution & landslides in the northern Colombian Andes</h1>
+					<br>
+					<p style="font-size: 2rem;font-weight: bolder;">Edier Aristizábal & Oliver Korup</p>
+					<p style="font-size: 1.1rem;font-style: italic;">Geohazards Group</p>
+					<p style="font-size: 1.2rem;">Institute of Environmental Science and Geography</p>
+					<p style="font-size: 1.5rem;font-weight: bolder;">Postdam University</p>
+					<br>
+					<p style="font-size: 1rem;font-style: italic;">Project supported by:</p>
+					<p style="font-size: 1.5rem;font-weight: bolder;">Alexander von Humboldt Foundation</p>
+
+					<p id="demo" style="position:absolute;top:100%;right:45%;color: gray;font-size: 1rem;"></p>
+					<script>
+						var d = new Date();
+						var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+						document.getElementById("demo").innerHTML = months[d.getMonth()] + " " + d.getDate() + " / " + d.getFullYear();
+					</script>
+				</section>
+
+<!--Intro-->
+				<section>
+					<section>
+						<h1>Intro</h1>
+					</section>
+
+					<section>
+						<h3>Multi-geohazard setting in Colombia</h3>
+						<img src="http://drive.google.com/uc?export=view&id=18WsavwFqh1BPMIoTWi5AnyxBwEbAkQgP" width="600">
+					</section>
+
+					<section>
+						<h3>Natural hazard</h3>
+						<img src="Images/cuases.png" width="400">
+						<img src="Images/landslides_history.png" width="550">
+					</section>
+				</section>
+					
+<!--Regional setting-->
+				<section>
+
+					<section>
+						<h1>Regional setting</h1>
+					</section>
+
+					<section>
+						<h3>The northern Colombian Andes</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1IVOPUPCnZsfRXd17j9MJ6km5WAZ0hrSY" width="450">
+						<img src="http://drive.google.com/uc?export=view&id=1SwVvIgDk5FcbYq5lP3TJNrLOCaSKGRSM" width="150" style="position: absolute; top: 60px; left: 545px; border: 0px black solid;"/>
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Elevations > 3700 msnm</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1Ms5GxXwz_-D-WtKFbUjS5VDbUbEYDsqW" width="600">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Easter Cordillera profile (10km)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1SA706WRn76InmUribgD7EZMYStIywPE8">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Central Cordillera profile (10km)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-7P0XtCh3YYpR_B1-to2hSq4fUmZJKC0">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Western Cordillera profile (10km)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-TNif0WYgI4LnpdbndHYXdKein3eC1Ux">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Profile NW (10km)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1RjxncRu4v2bg_bOvhX2R6gN7PCf8gC53">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Profile NE (10km)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-1Q1YPxmCLoF3UL137Sjw7HPc55IAk2d">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+
+				</section>
+
+<!--Local setting-->
+				<section>
+
+					<section>
+						<h1>Local setting</h1>
+					</section>
+
+					<section>
+						<h3>Study area relief</h3>
+						<div style="position: relative; width: 100%;"> 
+						<img src="http://drive.google.com/uc?export=view&id=1yb7a3r2blSzEoSB3OuHQj7QdtFFTucbe" width="550"/>
+						</div>
+						<figcaption>Source: Google Earth Engine</figcaption>
+					</section>
+
+					<section>
+						<h3>Local geological setting</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1ZCRI8yQkHIg7qg2mrlFqIN4YKjFqMFm8" width="600">
+						<figcaption>Source: Gomez & Pinilla-Pachón (2019)</figcaption>
+					</section>
+
+					<section>
+						<h3>Relief</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1ReDW4f38iEdhfzrnnLBuMZRxkMyXfnxt" width="450" class="move">
+					</section>
+
+					<section>
+						<h3>Major basins</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1NaR_il0YPB0542vFGHBTpx4Ofws3iqA-" width="600">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Longitudinal river profiles</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1nTkHFZZTf_0QD5316HfvnYW5agP5_IrZ" width="1000">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Drainage network</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1yWhqC8fBRGwaqoUX0gooDdIlqVzVRFnh" width="600">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Magdalena basin</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-M0Z7rXEcVbcedVWqT6jMqGr85uENkkK" width="600">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Cauca basin</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-9iAO76iOTzI4R3qzq4UmQWQHCIY0aYG" width="600">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Atrato basin</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-MN3FGYeWXa2to01bTXKw2b0laohbJEt" width="600">
+						<figcaption>Data source: SRTM 30m</figcaption>
+					</section>
+
+					<section>
+						<h3>Rainfall</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1n9Mlf1uejiBL2e1A-vczS7CCN9ttvUGt" >
+						<figcaption>Source: Satellitel rainfall -CHIRPS- (1981-2023) Spatial Res. 5km</figcaption>
+					</section>
+
+					<section>
+						<h3>Profile A</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1n3m38DW9Lo2DSfN1uSEobvo6j2De0T-T" width="800" class="move">
+						<figcaption>Source: Satellitel rainfall -CHIRPS- (1981-2023) Spatial Res. 5km</figcaption>
+					</section>
+
+					<section>
+						<h3>Profile B</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-2P5Jj7mXNGaaa7OkELMguxZDUQcIGHi" width="800" class="move">
+						<figcaption>Source: Satellitel rainfall -CHIRPS- (1981-2023) Spatial Res. 5km</figcaption>
+					</section>
+
+					<section>
+						<h3>Profile C</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-7MB1LDrkvF8NFCsFX9wvF0QUOvbK1I7" width="800" class="move">
+						<figcaption>Source: Satellitel rainfall -CHIRPS- (1981-2023) Spatial Res. 5km</figcaption>
+					</section>
+
+				</section>
+	
+<!--profiles EW-->
+				<section>
+					<section data-transition="none">
+						<h1>Swath profiles EW</h1>
+						<p style="color: black; font-size: 2rem;">Python Package: pyswath</p>
+						<p style="color: black; font-size: 2rem;">SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections North</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-9zUan6Qty1uIDn9bUTEa0JltBFe3Y8E" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NW</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-LWiQiRm1HZFRsGe98XHicTz_N_BPyuu" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Caldas-Bello</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-MYsfHwdkvI6xNLN88kIUfCtAdBVHOE4" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-YfpZRtsxn3HXeU7s5mm7xvgshgId5M2" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3 >Sections South</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-Y4dvap1XkuY4KXiVvgT0stuyadEmNIS" width="1000">
+					</section>
+				</section>
+
+<!--profiles NE-->
+				<section>
+					<section data-transition="none">
+						<h1>Swath profiles NE</h1>
+						<p>Python Package: pyswath</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NS</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-elIw6aTrLcin9fp_bZluURy5DqaVQrZ" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections NW</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-hs-B6AtcbSFniIOvg2VqMWIr-lL--sK" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas-Espíritu Santo</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-hu7tOXX-z_7BWtxcAKMpCRlJLTJ44zK" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 1</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-o_wFFBa1kUjeQJz_ff66brjBOgemz4w" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 2</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-vQfFgqD6vwgGZHrXrx4fZu1qwlFWTYC" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections NW</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-xnUthyH7PObLnxYxCACBoWRP8pEkxRW" width="1000">
+					</section>
+				</section>
+	
+<!--profiles NW-->
+				<section>
+					<section data-transition="none">
+						<h1>Swath profiles NW</h1>
+						<p>Python Package: pyswath</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Cauca NS</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-xvbVvWWpTLpAowORBwlFgoRnnwZBPJb" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Rionegro</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10KSdCga9yaIZ3d0-QcYEDi6xu7s_rmcU" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Bello</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10aXdxi6G8z3EYTNyaV1QOy6z94muR5IV" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Ovejas-Espíritu Santo</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10B0V21d4hf1OSMZBIspXS_2aa2hR6WUc" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 1</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10GBisDyU1Wzb5SddjUjGPkCdMdSINZuY" width="1000">
+					</section>
+	
+					<section data-transition="none">
+						<h3>Sections Espíritu Santo 2</h3>
+						<img src="http://drive.google.com/uc?export=view&id=10K5NE6tWBGO1SID5Uw3HENTfneY0uOMa" width="1000">
+					</section>
+				</section>
+
+<!--inventory-->
+				<section>
+
+					<section>
+						<h1>Natural hazard inventory</h1>
+					</section>
+
+					<section>
+						<h3>Recent landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10Pwfw8UiYQCuTeoN9ZpU0KeyGPKbevd7" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Recent landslides</h3>
+						<img class="r-stretch" src="Images/recent.png" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Ripley's function</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1pOlCstLOOkB7pl5ieMXfrnnO_fHBKtux">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relict landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=14ISNzwFaX_wlX9gU0SYCpCVEUDsYsvfJ" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relict landslides</h3>
+						<img class="r-stretch" src="Images/ancient.png" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Ripley's function</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1sAC6kezdb9BNcBJxKHFFK609_IWRJjLh">
+						<figcaption>Data: 12.5 m DEM, Software: Pysal Python library</figcaption>
+					</section>
+
+				</section>
+
+<!--x analysis-->
+				<section>
+					<section>
+						<h1>$\chi$ analysis</h1>
+						<p>LSDTopoTools</p>
+						<p>SRTM 30mx30m</p>
+					</section>
+
+					<section>
+						<h3>$\chi$ plot (DEM 30m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=152_0AnVN4hvkGlJR-yciZaNZbuFrNJnO" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>$\chi$ plot (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1lQ_IXN7z9t-IiUy8v63d_f5I0eOTPKY7" width="450">
+						<figcaption></figcaption>
+					</section>
+										
+					<section>
+						<h3>$\chi$ plot & & faults (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1lYUK1g4DAXxDIux2W60KrEsUC1DKkXPh"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>$\chi$ plot & transient borders (DEM 30m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1VHSHmpLvd_NUVcxlMCk1qdW1bMNhGHoH" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>$\chi$ plot & transient borders (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1lW9jkjYb01wxc0DKaW0ef64sPdvtTpz8" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>$\chi$ plot & Transient borders & faults (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1l_gE7N9Ua6owLpG_HupRZsCreJdsRmdB"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Transient borders (DEM 30m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1pe0vfkfXhkLoOHBc0q8Sr5C2HqKbv_oc"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Transient borders (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1lAySJ_47jnavQCHfZzYaZhj2PQwl038d"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3> Transient borders & faults (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1lLFhQhb8tKuu9cil-Ll3YzLOYYAcjShG"  width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>$k_{sn}$</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1xQOgS6ojbBd3rF6EZmgGFoNa0FWXl2U5" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Recient landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1AYywIKyymGzLCOyZSL1-jKVFiS3GdT9R" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Relict landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1jfbjLBeanmiYLsLQAktMwFwLKHRY8fcr" width="450">
+						<figcaption></figcaption>
+					</section>
+
+					<section>
+						<h3>Elevation - $\chi$ plot</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-4gSMdkotLidI3tkeNrPD1UgFBd4GAwi" width="600">
+					</section>
+
+					<section>
+						<h3>Drainage channels and landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-aaluyINyNtWoDETwC-vzboHYnUD-tC5" width="600">
+					</section>
+
+				</section>
+
+<!--Hipsometry analysis-->
+				<section>
+					<section>
+						<h1>Hypsometric analysis</h1>
+						<p>SRTM 30m & AlosPalsar 12.5m</p>
+					</section>
+
+					<section>
+						<h3>Hypsometric index (DEM 30m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=161Cuv3v61B3rPnzMg1rzqIP1qrR-gJGN" class="move">
+					</section>
+
+					<section>
+						<h3>Hypsometric index (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1m1B8-eIixco7L_7s2i4R8kq1yZZLrCPI" class="move">
+					</section>
+
+					<section>
+						<h3>Hypsometric index (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1u99zXY5oUCqo0DbQ5wji3YlyHQdCs3Tk" class="move">
+					</section>
+
+					<section>
+						<h3>Hypsometric index & faults (DEM 12.5m)</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uHMNnyisk9L6PZfTqV_7HTgFu2grl7pt" class="move">
+					</section>
+
+					<section>
+						<h3>Hypsometric index & recent landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uOACrsEvqD34jBJX2179aRC38wsWQkFq" class="move">
+					</section>
+
+					<section>
+						<h3>Hypsometric index & relict landslides</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1uNnLew3TcoQdcb_c90OegFB1ejvenHQw" class="move">
+					</section>
+
+					<section>
+						<h1>Rainfall vs. hypsometric index</h1>
+						<div class="twocolumn">
+							<div>
+								<h3>Recent</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vKDToz2jp1IPx5mT8CQHYnbzyR5RIHX-" width="500">
+							</div>
+							<div>
+								<h3>Relict</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vs_y1VRwoEh7bz7CZctQpx0CkdAHhLI4" width="500">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h1>Structural density vs. hypsometric index</h1>
+						<div class="twocolumn">
+							<div>
+								<h3>Recent</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1_arNY9xEDwgGuXZcLmoGqrZeMdlx-a9g" width="500">
+							</div>
+							<div>
+								<h3>Relict</h3>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1_dncjTErH4iNyOJ4W1zBILOVXW_qow0J" width="500">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Recent</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vKDToz2jp1IPx5mT8CQHYnbzyR5RIHX-" width="700">
+							</div>
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vReQxeKE_FjWn2QGOs_u4gpu2Xv4tslQ" width="400">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Relict</h2>
+						<div class="twocolumn">
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1vs_y1VRwoEh7bz7CZctQpx0CkdAHhLI4" width="700">
+							</div>
+							<div>
+								<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1w-Sc9pC8dHQ1sO0t2BZ42u1a8QBJhZxj" width="400">
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+<!--Structural analysis-->
+				<section>
+					<section>
+						<h1>Structural analysis</h1>
+					</section>
+
+					<section>
+						<h3>Structural orientation by 5kmx5km blocks</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1E5aujQ0UEvRgBSqHuS-hWDKPdBen45kB">
+					</section>
+
+					<section>
+						<h3>Structural density by 5kmx5km blocks</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1D__ySqJ_BEqwcSb8mH2TzcOKLy-L4F2q">
+					</section>
+
+					<section>
+						<h3>Structural orientation by tectonic blocks</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1E6Ogf57-fzBwlcDdLhV6OyiLJLe_DPBJ">
+					</section>
+
+					<section>
+						<h3>Structural density by tectonic blocks</h3>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1Dzif92-2GcV00Cej8NSDU4XGIUTo43tu">
+					</section>
+				</section>
+
+<!--Knickpoint evolution-->
+				<section>
+					<section>
+						<h1>Knickpoint evolution</h1>
+					</section>
+
+					<section>
+						<h2></h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1fi71OjHTTaQshkMibi9pCqgVMms9FPbl" width="700">
+					</section>
+
+					<section>
+						<h2>Knickpoint evolution & transient borders</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1fpiWRTNF1n6d8djhl03u5dqSAbUhy-SV" width="700">
+					</section>
+
+					<section>
+						<h2>Knickpoint evolution & faults</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1fuTBvtIDudKKYpxlk12_cPFpDXG316W3" width="700">
+					</section>
+
+					<section>
+						<h2>Knickpoint evolution and landslides</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1fjHr8q0YYnybNi7JqpDyNYpbqiFjiB01" width="700">
+					</section>
+
+					<section>
+						<h2>Nechi</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1wmXLV_f5xPsezJkR0OS5IQKmMEk5HeSk" width="700">
+					</section>
+
+					<section>
+						<h2>Nare</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-DY1sJv612tJHCVjwIN-12K07wdsgJcD" width="700">
+					</section>
+					
+					<section>
+						<h2>Arma</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1x1JeP4jeoHUJqNRrS_GON1PXARO0sZw7" width="700">
+					</section>
+
+					<section>
+						<h2>San Juan</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1xmQfBvF2gUQLgC2aVgeJyc7t2csbKodD" width="700">
+					</section>
+					
+					<section>
+						<h2>Sucio</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=1-hb55_3w1pCvPRIaUhRUOiGto-7u_eaG" width="700">
+					</section>
+				</section>
+<!--Nechi-->
+				<section>
+					<section>
+						<h1>Sub-basin Nechi</h1>
+					</section>
+
+					<section>
+						<h2>Nechi</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=107-_vxQRSIi0dQS_RCf8KTP79x6zEwxd" width="700">
+					</section>
+				</section>				
+				
+<!--Nare-->
+				<section>
+					<section>
+						<h1>Sub-basin Nare</h1>
+						<p>ALOS-PALSAR 12.5mx12.5m</p>
+					</section>
+		
+						<section>
+							<img src="http://drive.google.com/uc?export=view&id=1-FBiWE38wkMCpmUZeW3onU015a6JH0pZ" width="800">
+						</section>
+
+						<section>
+							<h2>Nare</h2>
+							<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10ZFJQiT6ROzz3EmwrH3-pTo7D2A4G3f-" width="700">
+						</section>
+
+						<section>
+							<h3>Longitudinal river profiles</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1bnbkKDqiPLO9YVVuZgDvU2K2uIpuyLM_" width="900">
+						</section>
+		
+						<section>
+							<h3>Slope-Elevation plot</h3>
+							<img src="http://drive.google.com/uc?export=view&id=1RoGTq8DYOOAjxhtvh0L3veVjFLoUTYGE" width="750">
+						</section>
+					</section>
+
+<!--Arma-->
+				<section>
+					<section>
+						<h1>Sub-basin Arma</h1>
+					</section>
+	
+					<section>
+						<img src="http://drive.google.com/uc?export=view&id=1FA1qNu2aqweL9PxXTnXp188iT-GQMzRb" width="450">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<img src="http://drive.google.com/uc?export=view&id=1EN4-5SWii4DIE_u1cXliKg6ddoPDcrg_" width="450">
+						<figcaption></figcaption>
+					</section>
+
+
+					<section>
+						<h2>Arma</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10WCJ-1ycEmroBvKTd-jYcWq0vjV6OJrx" width="700">
+					</section>
+
+					<section>
+						<h3>Slope - Elevation plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=17miuRjJW4L70Wy2SXY96x43YXzuQvPvB" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Slope - Area plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1SRD-evSZIcWs2Jfap9ykLRrQySeHB35E" width="700">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Longitudinal profile</h3>
+						<img src="http://drive.google.com/uc?export=view&id=13wGi4KQDBLvfJEWiXW1S6feXwoNbsUWH" width="600">
+						<figcaption></figcaption>
+					</section>
+				
+					<section>
+						<h3>$K_{sn}$</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1-0CtXzRxEdaCZK6XkZh9T2-i1nQifhOS" width="800">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>$K_{sn}$</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1VmrFhsL7XCuoHu7Pqngyme75sdcO6JnQ" width="400">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>χ plot</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1ZEAG9pozr2XJjfQgawNFnIkv7KIsO2Ga" width="400">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Catchment capture</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1pAQSKmKQcAbJZkQY0MugSmeKBKB2vzf0" width="600">
+						<figcaption></figcaption>
+					</section>
+	
+					<section>
+						<h3>Plateaux capture</h3>
+						<img src="http://drive.google.com/uc?export=view&id=1_oIXN1ApQRFmSBBg5vjS4aw1v3M2Zd3H" width="600">
+						<figcaption></figcaption>
+					</section>
+				</section>
+
+<!--San Juan-->
+				<section>
+					<section>
+						<h1>Sub-basin San Juan</h1>
+					</section>
+
+
+					<section>
+						<h2>San Juan</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10Yv8E5FYBgXTVTFmT9eHZt1j2M-uYpZ3" width="700">
+					</section>
+				</section>
+
+<!--Sucio-->
+				<section>
+					<section>
+						<h1>Sub-basin Sucio</h1>
+					</section>
+
+					<section>
+						<h2>Sucio</h2>
+						<img class="r-stretch" src="http://drive.google.com/uc?export=view&id=10gHOaTlwVcomIOvy4xyYbgydGUWX0OQh" width="700">
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				slideNumber: 'c/t',
+				hash: true,
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+						}
+					}
+				},
+				menu: {
+					side: 'left', // 'left' or 'right'.
+					width: 'normal', // 'normal', 'wide', 'third', 'half', 'full', or
+					numbers: false,
+					titleSelector: 'h1, h2, h3',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+					themesPath: 'dist/theme/',
+					transitions: false,  // ['None', 'Fade', 'Slide']
+					openButton: true,
+					openSlideNumber: true,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+	
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+				dependencies: [
+	
+				]
+			});
+		</script>
+	</body>
+</html>
